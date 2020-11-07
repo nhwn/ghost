@@ -37,14 +37,14 @@ fn main() -> error::Result<()> {
     cells[3].set(b'-');
     cells[8].set(b'-');
     // try all possible permutations of SKY-[A-Z]{4}-\d{4}
-    for a0 in b'A'..b'Z' {
-        for a1 in b'A'..b'Z' {
-            for a2 in b'A'..b'Z' {
-                for a3 in b'A'..b'Z' {
-                    for d0 in b'0'..b'9' {
-                        for d1 in b'0'..b'9' {
-                            for d2 in b'0'..b'9' {
-                                for d3 in b'0'..b'9' {
+    for a0 in b'A'..=b'Z' {
+        for a1 in b'A'..=b'Z' {
+            for a2 in b'A'..=b'Z' {
+                for a3 in b'A'..=b'Z' {
+                    for d0 in b'0'..=b'9' {
+                        for d1 in b'0'..=b'9' {
+                            for d2 in b'0'..=b'9' {
+                                for d3 in b'0'..=b'9' {
                                     cells[4].set(a0);
                                     cells[5].set(a1);
                                     cells[6].set(a2);
@@ -53,6 +53,7 @@ fn main() -> error::Result<()> {
                                     cells[10].set(d1);
                                     cells[11].set(d2);
                                     cells[12].set(d3);
+                                    println!("{}", raw_ptr);
                                     if check.call(raw_ptr, FLAG_LEN)? != 0 {
                                         println!("{}", ptr.get_utf8_string(&memory, FLAG_LEN as u32).unwrap());
                                     }
