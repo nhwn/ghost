@@ -1,0 +1,16 @@
+[package]
+name = "ghost"
+version = "0.1.0"
+authors = ["Nathan Nguyen <nathan.tm.nguyen@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# wasmer = "1.0.0-alpha01.0"
+# # The Cranelift compiler used by the JIT engine
+# wasmer-compiler-cranelift = "1.0.0-alpha01.0"
+# # The engine we'll use in the API
+# wasmer-engine-jit = "1.0.0-alpha01.0"
+wasmer-runtime = "0.17.1"
+
