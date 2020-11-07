@@ -53,7 +53,6 @@ fn main() -> error::Result<()> {
                                     cells[10].set(d1);
                                     cells[11].set(d2);
                                     cells[12].set(d3);
-                                    println!("{}", raw_ptr);
                                     if check.call(raw_ptr, FLAG_LEN)? != 0 {
                                         println!("{}", ptr.get_utf8_string(&memory, FLAG_LEN as u32).unwrap());
                                     }
