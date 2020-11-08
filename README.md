@@ -1,7 +1,6 @@
 # Setup
 Clone the repo and run `cargo run --release`
 
-I found the crate for running WASM in Rust here:
-https://docs.rs/wasmer-runtime/0.17.1/wasmer_runtime/
+Note that this makes the (pretty bad) assumption that the machine you have has exactly 8 cores, so your mileage may vary.
 
-I think the issue is with the initial malloc, but I don't know for sure.
+
